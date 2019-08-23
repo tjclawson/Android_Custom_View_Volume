@@ -28,10 +28,13 @@ class VolumeKnob(context: Context?, attrs: AttributeSet?): View(context, attrs) 
 
     init {
 
+       val typedArray = context?.obtainStyledAttributes(attrs, R.styleable.VolumeKnob)
+
 
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
+        super.onTouchEvent(event)
         when (event?.action) {
             MotionEvent.ACTION_DOWN -> {
                 startX = event.x
@@ -95,7 +98,7 @@ class VolumeKnob(context: Context?, attrs: AttributeSet?): View(context, attrs) 
 
     }
 
-
-
-
+    override fun callOnClick(): Boolean {
+        return super.callOnClick()
+    }
 }

@@ -2,6 +2,7 @@ package com.example.android_custom_view_volume
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,11 +16,15 @@ class MainActivity : AppCompatActivity() {
         tv_rotation.text = rotateText
         tv_volume.text = volumeText*/
 
-        volumeKnob.setOnClickListener {
+        val volumeKnob = volume_knob
 
-            tv_volume.text = volumeKnob.getVolume()
+        /*volumeKnob.setOnClickListener {
 
-        }
+            tv_volume.text = volumeKnob.volume.toString()
+
+           // tv_volume.text = volumeKnob.getVolume()
+
+        }*/
         //val rotate = VolumeKnob::rotate
 
         //var volumeText = "Volume $volume"
@@ -27,7 +32,10 @@ class MainActivity : AppCompatActivity() {
         //tv_volume.text = volumeText
 
 
+    }
 
-
+    fun onClick(view: View){
+        val volumeKnob = volume_knob
+        tv_volume.text = volumeKnob.volume.toString()
     }
 }
