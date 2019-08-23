@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,7 +8,7 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <!--<LinearLayout
+    <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="@+id/volumeKnob">
@@ -26,14 +27,16 @@
                 android:text="test"
 
                 android:textSize="30sp"/>
-    </LinearLayout>-->
+    </LinearLayout>
 
     <com.example.android_custom_view_volume.VolumeKnob
+
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:id="@+id/volumeKnob"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/volumeKnob"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

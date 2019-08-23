@@ -15,6 +15,19 @@ class MainActivity : AppCompatActivity() {
         tv_rotation.text = rotateText
         tv_volume.text = volumeText*/
 
+        volumeKnob.setOnClickListener {
+
+            tv_volume.text = volumeKnob.getVolume()
+
+        }
+        //val rotate = VolumeKnob::rotate
+
+        //var volumeText = "Volume $volume"
+
+        //tv_volume.text = volumeText
+
+
+
 
     }
 }
